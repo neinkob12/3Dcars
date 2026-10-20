@@ -1,6 +1,12 @@
 # Phase 1 Proposal (tasks 2 and 3)
 
-Status: waiting for approval. No code is written until this is approved.
+Status: approved on 2026-10-20, with these changes:
+
+* Models expanded from 15 to 30 (see table, second block).
+* Source: motor-talk.de. Its terms (section 3.4) allow private use only and need consent from gutefrage for commercial use. The founder decided to run a low-volume test anyway.
+* No contact email in the user agent.
+* Test run: 20 threads per model.
+* Normalization denominator is threads *listed* per model (from listing pages, 40 per request), not threads read. Threads read are picked title-first (titles that already hint at a part or NLA), so dividing by threads read would inflate every model equally and hide real differences.
 
 ## Task 2: SQLite schema
 
@@ -158,6 +164,26 @@ Three per brand, chosen for mid to upper tier enthusiast cars with lots of inter
 | VW | Golf 2 | Golf / Jetta 2 (GTI, G60) | 1983 to 1992 |
 | VW | Corrado | Corrado | 1988 to 1995 |
 | VW | T3 | Transporter / Bulli | 1979 to 1992 |
+
+Added after approval:
+
+| Brand | Chassis | Model | Years |
+|---|---|---|---|
+| BMW | E28 | 5er | 1981 to 1988 |
+| BMW | E24 | 6er | 1976 to 1989 |
+| BMW | E39 | 5er | 1995 to 2004 |
+| Mercedes | R129 | SL | 1989 to 2001 |
+| Mercedes | W140 | S-Klasse | 1991 to 1998 |
+| Mercedes | R107 | SL | 1971 to 1989 |
+| Audi | B5 | A4 | 1994 to 2001 |
+| Audi | Typ 85 | Coupé / Ur-quattro | 1980 to 1991 |
+| Audi | D2 | A8 | 1994 to 2002 |
+| Porsche | 993 | 911 | 1993 to 1998 |
+| Porsche | 986 | Boxster | 1996 to 2004 |
+| Porsche | 924 | 924 | 1976 to 1988 |
+| VW | Golf 1 | Golf 1 / Cabrio | 1974 to 1993 |
+| VW | Golf 3 | Golf 3 / Vento | 1991 to 1999 |
+| VW | Scirocco 2 | Scirocco | 1981 to 1992 |
 
 BMW stays in as a benchmark: if BMW shows high demand but is already served by Treedy/DoviWorks, that calibrates what "high" means for the others.
 
