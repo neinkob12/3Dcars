@@ -1,0 +1,14 @@
+rank,brand,chassis_code,part,oem_part_number,oem_numbers,mentions,mentions_recent,threads_scanned,threads_read,volume,printability,price_signal,unsolved,score,example_urls
+1,Mercedes,R129,Clip / Halteklammer,,,1,1,112,20,100.0,1.0,1.0,1.0,100.0,https://www.motor-talk.de/forum/tuer-verkleidung-t7621500.html#post66945897
+2,Mercedes,R129,Abdeckung / Blende (allgemein),,,1,1,112,20,100.0,0.56,1.0,1.0,56.0,https://www.motor-talk.de/forum/r129-sl-300-24v-zuendanlage-erneuern-abdeckung-zylinderkopf-t6802854.html#post64111015
+3,Mercedes,R129,Handschuhfach Scharnier / Schloss,,,1,0,112,20,50.0,1.0,1.0,1.0,50.0,https://www.motor-talk.de/forum/handschuhfach-t6822042.html#best-answer-post58636240
+4,BMW,E36,Emblem / Schriftzug,,,1,0,409,20,50.0,0.7,1.0,1.0,35.0,https://www.motor-talk.de/forum/suche-318is-original-schriftzug-fuer-meinen-class-2-t8673154.html#post75541594
+5,VW,Golf 1,Leuchte Gehäuse innen / Lichtschalter,,,1,0,58,20,50.0,0.7,1.0,1.0,35.0,https://www.motor-talk.de/forum/golf-1-cabrio-1992-tachoblende-amarturentafel-t7112808.html#post61899921
+6,VW,Golf 1,Tachoblende / Kombiinstrument Rahmen,,,1,0,58,20,50.0,0.56,1.0,1.0,28.0,https://www.motor-talk.de/forum/golf-1-cabrio-1992-tachoblende-amarturentafel-t7112808.html#post61899921
+7,VW,Golf 1,Abdeckung / Blende (allgemein),,155867243,1,0,58,20,50.0,0.56,1.0,1.0,28.0,https://www.motor-talk.de/forum/golf-1-cabrio-1992-tachoblende-amarturentafel-t7112808.html#post61900051
+8,Mercedes,W124,Stoßstange / Spoiler Teil,,,1,1,415,20,100.0,0.28,1.0,1.0,28.0,https://www.motor-talk.de/forum/welche-prallleisten-nachbauten-koennt-ihr-empfehlen-ersatz-fuer-a1248851021-t8561830.html#post74655640
+9,BMW,E36,Gurtschloss / Gurtteil,,61351384761,1,1,409,20,100.0,0.0,1.0,1.0,0.0,https://www.motor-talk.de/forum/gurtstraffer-hat-grundlos-ausgeloest-t8285655.html#post72112983
+10,BMW,E34,Brems- / Lenkungsteil,,,3,0,396,20,150.0,0.0,1.0,1.0,0.0,https://www.motor-talk.de/forum/bremskraftregler-touring-95-t6675434.html#post56931304 https://www.motor-talk.de/forum/bremskraftregler-touring-95-t6675434.html#post56940828 https://www.motor-talk.de/forum/bremskraftregler-touring-95-t6675434.html#post56948700
+11,Mercedes,W201,Brems- / Lenkungsteil,,,1,0,407,20,50.0,0.0,1.0,1.0,0.0,https://www.motor-talk.de/forum/bremse-laesst-sich-nicht-entlueften-t6505417.html#post55021710
+12,Audi,B3/B4,Brems- / Lenkungsteil,,,1,0,269,20,50.0,0.0,1.0,1.0,0.0,https://www.motor-talk.de/forum/knacken-beim-einschlagen-der-lenkung-t2749938.html#post56310618
+13,Audi,D2,Brems- / Lenkungsteil,,,2,0,392,20,100.0,0.0,1.0,1.0,0.0,https://www.motor-talk.de/forum/bremsenumbau-t6547628.html#post62237782 https://www.motor-talk.de/forum/bremsenumbau-t6547628.html#post62239522
