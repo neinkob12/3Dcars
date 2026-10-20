@@ -83,7 +83,7 @@ PARTS = [
     ("Aschenbecher", "cover", "M", 1, 0, [("aschenbecher", "de"), ("ashtray", "en")]),
     ("Handschuhfach Scharnier / Schloss", "mechanism", "S", 0, 0, [("handschuhfach", "de"), ("glovebox", "en"), ("glove box", "en")]),
     ("Sonnenblende Halter / Clip", "holder", "S", 0, 0, [("sonnenblende", "de"), ("sun visor", "en")]),
-    ("Fensterkurbel", "knob", "S", 1, 0, [("fensterkurbel", "de"), ("kurbel", "de"), ("window crank", "en")]),
+    ("Fensterkurbel", "knob", "S", 1, 0, [("fensterkurbel", "de"), ("window crank", "en")]),
     ("Türöffner / Türgriff innen", "handle", "S", 1, 0, [("türöffner", "de"), ("türgriff", "de"), ("innengriff", "de"), ("door handle", "en")]),
     ("Knopf / Drehknopf / Taste", "knob", "S", 1, 0, [("drehknopf", "de"), ("knopf", "de"), ("taste", "de"), ("knob", "en"), ("button", "en")]),
     ("Schaltknauf / Schaltsack Rahmen", "knob", "S", 1, 0, [("schaltknauf", "de"), ("schaltsack", "de"), ("shift knob", "en")]),

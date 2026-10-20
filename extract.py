@@ -86,12 +86,16 @@ def main():
     for t in threads:
         oem_pattern = OEM_PATTERNS.get(brands.get(t["model_id"]))
         page_url, page_no = t["url"], 1
+        seen_texts = set()
         while True:
             cached = fetcher.cached(page_url)
             if cached is None:
                 break
             data = json.loads(cached)
             for i, post in enumerate(data["posts"]):
+                if post["text"] in seen_texts:  # unmarked quotes repeat a post verbatim
+                    continue
+                seen_texts.add(post["text"])
                 text = (data["title"] + ". " if page_no == 1 and i == 0 else "") + post["text"]
                 for phrase, part_id, oem_pn in post_mentions(text, data["title"], keywords, parts, oem_pattern):
                     conn.execute(

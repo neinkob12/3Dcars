@@ -1,6 +1,9 @@
 """Score (part, model) pairs and write ranked_parts.csv plus model_summary.csv.
 
-volume       = (mentions + mentions_recent) / threads_scanned * 1000
+volume       = (mentions + mentions_recent) / threads_read * 1000
+               Mentions only come from threads read, and every model gets the same
+               title-first sample, so threads read is the fair denominator.
+               threads_scanned (listed) is kept as a community size column.
 printability = 0 if safety relevant, else size factor * (0.7 if visible surface)
 score        = volume * price_signal * unsolved * printability
 price_signal and unsolved stay 1.0 until Phase 2.
@@ -45,8 +48,8 @@ def main(min_mentions=3):
         with_part=("part_id", lambda p: int(p.notna().sum())),
     ).reset_index()
     summary = summary.merge(per_model, on="model_id", how="left").fillna(0)
-    summary["mentions_per_1000_threads"] = (summary["mentions"] / summary["threads_scanned"].where(summary["threads_scanned"] > 0) * 1000).round(1)
-    summary.sort_values("mentions_per_1000_threads", ascending=False).drop(columns="model_id").to_csv("model_summary.csv", index=False)
+    summary["mentions_per_1000_threads_read"] = (summary["mentions"] / summary["threads_read"].where(summary["threads_read"] > 0) * 1000).round(1)
+    summary.sort_values("mentions_per_1000_threads_read", ascending=False).drop(columns="model_id").to_csv("model_summary.csv", index=False)
 
     known = mentions.dropna(subset=["part_id"])
     if known.empty:
@@ -61,7 +64,7 @@ def main(min_mentions=3):
         example_urls=("url", lambda u: " ".join(list(u)[:3])),
     ).reset_index()
     df = grouped.merge(parts, on="part_id").merge(models, on="model_id").merge(scanned, on="model_id")
-    df["volume"] = (df["mentions"] + df["mentions_recent"]) / df["threads_scanned"] * 1000
+    df["volume"] = (df["mentions"] + df["mentions_recent"]) / df["threads_read"] * 1000
     df["printability"] = df.apply(printability, axis=1)
     df["price_signal"] = 1.0
     df["unsolved"] = 1.0
@@ -80,7 +83,7 @@ def main(min_mentions=3):
     ranked = df[df["mentions"] >= min_mentions].sort_values("score", ascending=False)
     ranked.insert(0, "rank", range(1, len(ranked) + 1))
     cols = ["rank", "brand", "chassis_code", "part", "oem_part_number", "oem_numbers", "mentions", "mentions_recent",
-            "threads_scanned", "volume", "printability", "price_signal", "unsolved", "score", "example_urls"]
+            "threads_scanned", "threads_read", "volume", "printability", "price_signal", "unsolved", "score", "example_urls"]
     ranked[cols].round(2).to_csv("ranked_parts.csv", index=False)
     print(f"{len(df)} part/model pairs, {len(ranked)} with >= {min_mentions} mentions -> ranked_parts.csv")
 
